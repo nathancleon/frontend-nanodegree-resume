@@ -21,15 +21,14 @@ var education = {
             "name": "St. Edward's University",
             "city": "Austin, Texas",
             "majors": "Psychology",
-            "graduationYear": "2013",
+            "years": "2009-2013",
             "url": "http://www.stedwards.edu"
-        },
+        }
+    ],
+    "onlineCourses": [
         {
-            "name": "Udacity",
-            "city": "Remote",
-            "majors": "Front-End Web Development",
-            "graduationYear": "pending",
-            "url": "http://www.udacity.com"
+            "title": "Front-End Web Development Nanodegree",
+            "school": "Udacity"
         }
     ]
 };
