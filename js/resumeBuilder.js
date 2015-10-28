@@ -1,6 +1,9 @@
+//Name and Role variables defined
 var myname = "Nathaniel Collins";
 var role = "Front-End Web Developer";
 
+
+//Defining bio object
 var bio = {
     "name": "Nathaniel Collins",
     "role": "Front-End Web Developer",
@@ -16,7 +19,7 @@ var bio = {
     "bioPic": "images/nathan.jpg"
 };
 
-
+//Defining variables and replacing data in helper.js with bio data
 var formattedName = HTMLheaderName.replace("%data%", myname);
 var formattedRole = HTMLheaderRole.replace("%data%", role);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
@@ -29,7 +32,7 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedwelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
 
-
+//Appending the variables to the page
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
@@ -41,6 +44,7 @@ $("#topContacts").append(formattedTwitter);
 $("#topContacts").append(formattedLocation);
 
 
+//Defining the Education object
 var education = {
     "schools": [
         {
@@ -60,6 +64,8 @@ var education = {
     ]
 };
 
+
+//Defining the work object
 var work = {
     "jobs": [
         {
@@ -77,6 +83,8 @@ var work = {
     ]
 };
 
+
+//Defining the projects object
 var projects = {
     "projects": [
         {
@@ -98,6 +106,8 @@ var projects = {
     ]
 };
 
+
+//Skills - using an if statement to append to the page
 if (bio.skills.length > 0) {
 
     $("#header").append(HTMLskillsStart);
@@ -112,6 +122,8 @@ if (bio.skills.length > 0) {
     $("#skills").append(formattedSkill);
 }
 
+
+//Work history function to append to the page
 function displayWork() {
 	for (job in work.jobs) {
 			$("#workExperience").append(HTMLworkStart);
@@ -132,6 +144,8 @@ function displayWork() {
 
 displayWork();
 
+
+//Projects function to append to the page
 projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
@@ -157,3 +171,5 @@ projects.display = function() {
 }
 
 projects.display();
+
+//adding map and interactivity to the javascript
