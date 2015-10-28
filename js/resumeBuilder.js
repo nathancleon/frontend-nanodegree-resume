@@ -14,7 +14,7 @@ var bio = {
         "twitter": "@nathancleon",
         "location": "Austin, Texas 78749"
     },
-    "welcomeMessage": "I'm really excited to learn web development and I feel like I am finally making progress!",
+    "welcomeMessage": "I'm really excited to learn web development and can't wait to build websites for others!",
     "skills": [ "HTML", "CSS", "JavaScript", "Research" ],
     "bioPic": "images/nathan.jpg"
 };
