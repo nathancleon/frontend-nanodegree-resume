@@ -8,16 +8,16 @@ var bio = {
     "name": "Nathaniel Collins",
     "role": "Front-End Web Developer",
     "contacts": {
-        "mobile": "512-567-5674",
-        "email": "nathancleon@gmail.com",
-        "github": "nathancleon",
-        "twitter": "@nathancleon",
-        "location": "Austin, Texas 78749"
+			"mobile": "512-567-5674",
+			"email": "nathancleon@gmail.com",
+			"github": "nathancleon",
+			"twitter": "@nathancleon",
+			"location": "Austin, Texas 78749"
     },
     "welcomeMessage": "I'm really excited to learn web development and can't wait to build websites for others!",
     "skills": [ "HTML", "CSS", "JavaScript", "Research" ],
     "bioPic": "images/nathan.jpg"
-};
+	};
 
 //Defining variables and replacing data in helper.js with bio data
 var formattedName = HTMLheaderName.replace("%data%", myname);
@@ -47,80 +47,103 @@ $("#topContacts").append(formattedLocation);
 //Defining the Education object
 var education = {
     "schools": [
-        {
-            "name": "St. Edward's University",
-            "city": "Austin, Texas",
-            "majors": "Psychology",
-            "years": "2009-2013",
-            "url": "http://www.stedwards.edu"
-        }
+			{
+				"name": "St. Edward's University",
+				"location": "Austin, Texas 78704",
+				"majors": "Psychology",
+				"dates": "2009-2013",
+				"url": "http://www.stedwards.edu"
+			}
     ],
     "onlineCourses": [
-        {
-            "title": "Front-End Web Development Nanodegree",
-            "school": "Udacity",
-            "url": "http://www.udacity.com"
-        }
+			{
+				"title": "Front-End Web Development Nanodegree",
+				"name": "Udacity",
+				"url": "http://www.udacity.com"
+			}
     ]
-};
+	};
 
 
 //Defining the work object
 var work = {
     "jobs": [
-        {
-            "employer": "Texas Windstorm Insurance Association",
-            "title": "Quality Assurance Analyst",
-            "dates": "October 2015 - Present",
-            "description": "Provided quality assurance for daily and catastrophe claim handling, prepared training documents and trained personal, prepared technical documents for management review and approval, prepared and presented to outside vendors, participated in management planning sessions. Completed quarterly audits of claim files and conducted slant audits to research trends in claim handling."
-        },
-        {
-            "employer": "Texas Windstorm Insurance Association",
-            "title": "Claims Examiner",
-            "dates": "September 2013 - October 2015",
-            "description": "Tasks performed include adjusting reserves and providing reserve recommendations to ensure consistent reserving activities, conduct detailed bill reviews to implement claim management and expense control, contact and/or interview claimants to get additional information, examine claims investigated by insurance adjusters, further investigating questionable claims to determine payment authorization, present cases and participate in their discussion at claim committee meetings, resolve complex, severe exposure claims using high service oriented file handling, verify and analyze data used in settling claims to ensure claims are valid and that settlements are made according to company practices and procedures."
-        }
+			{
+				"employer": "Texas Windstorm Insurance Association",
+				"title": "Quality Assurance Analyst",
+				"dates": "October 2015 - Present",
+				"description": "Provided quality assurance for daily and catastrophe claim handling, prepared training documents and trained personal, prepared technical documents for management review and approval, prepared and presented to outside vendors, participated in management planning sessions. Completed quarterly audits of claim files and conducted slant audits to research trends in claim handling."
+			},
+			{
+				"employer": "Texas Windstorm Insurance Association",
+				"title": "Claims Examiner",
+				"dates": "September 2013 - October 2015",
+				"description": "Tasks performed include adjusting reserves and providing reserve recommendations to ensure consistent reserving activities, conduct detailed bill reviews to implement claim management and expense control, contact and/or interview claimants to get additional information, examine claims investigated by insurance adjusters, further investigating questionable claims to determine payment authorization, present cases and participate in their discussion at claim committee meetings, resolve complex, severe exposure claims using high service oriented file handling, verify and analyze data used in settling claims to ensure claims are valid and that settlements are made according to company practices and procedures."
+			}
     ]
-};
+	};
 
 
 //Defining the projects object
 var projects = {
     "projects": [
-        {
-            "title": "About Me",
-            "dates": "September, 2015",
-            "description": "Created an about me page using HTML and CSS as part of the Udacity Front-End Web Development Nanodegree.",
-						"images": [
-							"images/about-me.png"
-						]
-        },
-        {
-            "title": "Portfolio",
-            "dates": "October, 2015",
-            "description": "Created portfolio page based on a mock up image provided by Udacity using Bootstrap.",
-						"images": [
-							"images/portfolio.png"
-						]
-        }
+			{
+				"title": "About Me",
+				"dates": "September, 2015",
+				"description": "Created an about me page using HTML and CSS as part of the Udacity Front-End Web Development Nanodegree.",
+				"images": [
+					"images/about-me.png"
+				]
+			},
+			{
+				"title": "Portfolio",
+				"dates": "October, 2015",
+				"description": "Created portfolio page based on a mock up image provided by Udacity using Bootstrap.",
+				"images": [
+					"images/portfolio.png"
+				]
+			}
     ]
-};
+	};
 
 
 //Skills - using an if statement to append to the page
 if (bio.skills.length > 0) {
 
-    $("#header").append(HTMLskillsStart);
+	$("#header").append(HTMLskillsStart);
 
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-    $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-    $("#skills").append(formattedSkill);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	$("#skills").append(formattedSkill);
 }
+
+
+//Education function to append to the page
+function displayEducation() {
+
+	for(school in education.schools) {
+			$("#education").append(HTMLschoolStart);
+
+			var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+			$(".education-entry:last").append(formattedName);
+
+			var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+			$(".education-entry:last").append(formattedCity);
+
+			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+			$(".education-entry:last").append(formattedMajor);
+
+			var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+			$(".education-entry:last").append(formattedDates);
+	}
+}
+
+displayEducation();
 
 
 //Work history function to append to the page
