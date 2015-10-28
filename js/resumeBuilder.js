@@ -12,7 +12,7 @@ var bio = {
         "email": "nathancleon@gmail.com",
         "github": "nathancleon",
         "twitter": "@nathancleon",
-        "location": "Austin, Texas"
+        "location": "Austin, Texas 78749"
     },
     "welcomeMessage": "I'm really excited to learn web development and I feel like I am finally making progress!",
     "skills": [ "HTML", "CSS", "JavaScript", "Research" ],
@@ -173,3 +173,4 @@ projects.display = function() {
 projects.display();
 
 //adding map and interactivity to the javascript
+$("#mapDiv").append(googleMap);
