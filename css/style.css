@@ -37,7 +37,7 @@ header {
 	display: block;
 	font-size: 2rem;
 	cursor: pointer;
-	color: #fff;
+	color: orange;
 }
 
 .nav-main {
@@ -119,6 +119,10 @@ h5 {
 
 }
 
+img {
+	width: 80%;
+	height: auto;
+}
 
 .date-text {
   font-style: italic;
@@ -271,6 +275,12 @@ span {
   .welcome-message {
     display: none;
   }
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
 }
 
 #map {
