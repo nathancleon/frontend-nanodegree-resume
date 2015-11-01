@@ -159,7 +159,7 @@ education.display = function () {
 education.display();
 
 //Work history function to append to the page
-function displayWork() {
+work.display = function() {
 	var job;
 	for (job in work.jobs) {
 			$("#workExperience").append(HTMLworkStart);
@@ -178,7 +178,7 @@ function displayWork() {
 	}
 }
 
-displayWork();
+work.display();
 
 
 //Projects function to append to the page
