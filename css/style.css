@@ -24,13 +24,19 @@ h6 {
   padding: 0 5%;
 }
 
+header {
+	height: 0;
+	width: 0;
+}
+
 .nav-toggle {
-	float: left;
+	width: 0;
+	height: 0;
+	position: fixed;
 	padding: 20px;
 	display: block;
 	font-size: 2rem;
 	cursor: pointer;
-	position: absolute;
 	color: #fff;
 }
 
@@ -243,6 +249,10 @@ span {
   #lets-connect {
     margin-top: 5%;
   }
+
+	.center-content {
+		padding-left: 80px;
+	}
 }
 
 @media only screen and (max-width:900px) {

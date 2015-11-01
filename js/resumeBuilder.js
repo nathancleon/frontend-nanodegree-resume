@@ -1,8 +1,3 @@
-//Name and Role variables defined
-var myname = "Nathaniel Collins";
-var role = "Front-End Web Developer";
-
-
 //Defining bio object
 var bio = {
     "name": "Nathaniel Collins",
@@ -88,10 +83,10 @@ var projects = {
 bio.display = function() {
 	'use strict';
 
-	var formattedRole = HTMLheaderRole.replace("%data%", role);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	$("#header").prepend(formattedRole);
 
-	var formattedName = HTMLheaderName.replace("%data%", myname);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedName);
 
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
