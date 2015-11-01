@@ -211,3 +211,10 @@ projects.display();
 
 //adding map and interactivity to the javascript
 $("#mapDiv").append(googleMap);
+
+//Toggle the nav menu
+$(function() {
+	$('.nav-toggle').on('click', function(){
+		$('.nav-main').toggleClass('open');
+	});
+});
