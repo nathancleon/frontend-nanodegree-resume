@@ -33,7 +33,7 @@ header {
 	width: 0;
 	height: 0;
 	position: fixed;
-	padding: 20px;
+	padding: 40px 20px 20px 20px;
 	display: block;
 	font-size: 2rem;
 	cursor: pointer;
